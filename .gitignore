@@ -1,0 +1,30 @@
+# Folders #
+######################
+node_modules/
+.idea
+
+# JS #
+######################
+app.js
+app.js.map
+
+# Styles #
+######################
+.sass-cache/
+style.css
+style.css.map
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+package-lock.json
+*.log
+*.psd
+*.ai
+*.pdf

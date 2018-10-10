@@ -1,0 +1,206 @@
+/*________________2.3. FORM ELEMENTS___________*/
+input::-ms-clear {
+    display: none;
+}
+
+::-webkit-input-placeholder {
+    color: $placeholder;
+}
+
+::-moz-placeholder {
+    color: $placeholder;
+}
+
+:-ms-input-placeholder {
+    color: $placeholder;
+}
+
+:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+:focus::-moz-placeholder {
+    color: transparent;
+}
+
+:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+.driver__filter-input::-webkit-input-placeholder {
+    color: $placeholder;
+}
+
+.driver__filter-input::-moz-placeholder {
+    color: $placeholder;
+}
+
+:-ms-input-placeholder {
+    color: $placeholder;
+}
+
+.driver__filter-input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.driver__filter-input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+.driver__filter-input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+textarea.textarea-field,
+input.text-input {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    margin: 0;
+    line-height: 29px;
+    font-size: 14px;
+    font-family: $mainFont;
+    color: $black;
+    border: 1px solid $inputBg;
+    background-color: $inputBg;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 3px;
+    
+    &.error {
+        color: $red;
+        border: 1px solid $red;
+    }
+    
+    &_date {
+        background-image: $calendar;
+        background-position: calc(100% - 5px) 50%;
+        background-size: 16px auto;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    
+    @media only screen and (max-width: 480px) {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+textarea.textarea-field {
+    height: 80px;
+    padding: 5px 10px;
+    line-height: normal;
+    overflow: hidden;
+    resize: none;
+}
+
+label.error {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    margin: 15px 0 0 0;
+    text-align: left;
+    color: $red;
+    white-space: nowrap;
+}
+
+.input-line {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.half-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-label {
+    margin-bottom: 5px;
+}
+
+.error-message {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    color: $red;
+    font-size: 14px;
+}
+
+select {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 30px;
+    display: block;
+    margin: 0;
+    padding: 0 10px;
+    font-size: 14px;
+    font-family: $mainFont;
+    color: $black;
+    line-height: 30px;
+    outline: none;
+    background-image: $arrowBg;
+    background-color: $inputBg;
+    background-size: 11px 7px;
+    background-position: calc(100% - 5px) calc(50% + 1px);
+    background-repeat: no-repeat;
+    border: 1px solid $inputBg;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    
+    &.condition-select {
+        width: 60px;
+    }
+    
+    &.error {
+        border-color: $red;
+    }
+    
+    @media only screen and (max-width: 480px) {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.checkbox {
+
+    &__item {
+        display: none;
+        
+        &:disabled + .checkbox__label {
+            opacity: 0.5;
+            cursor: default;
+        }
+    
+        &:checked + .checkbox__label:before {
+            background-image: $check;
+            background-position: 50% 50%;
+            background-size: 18px 18px;
+        }
+    
+        &.error + .checkbox__label:before {
+            border-color: $red;
+        }
+    }
+    
+    &__label {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        
+        &:before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid $border;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+    }
+}
