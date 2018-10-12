@@ -7,7 +7,64 @@
     min-width: 320px;
     
     &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 84px;
         @include inner();
+    }
+    
+    &__logo {
+        display: flex;
+        align-items: flex-start;
+        
+        &-icon {
+            margin-right: 8px;
+            
+            svg {
+                width: 25px;
+                height: 18px;
+                fill: $white;
+            }
+        }
+    }
+    
+    &__contacts {
+        position: relative;
+        
+        &-trigger {
+            display: none;
+        }
+        
+        &-list {
+            display: flex;
+            align-items: center;
+        }
+        
+        &-item {
+            font-size: 22px;
+            color: $lightColor;
+            
+            &:not(:first-child) {
+                margin-left: 20px;
+            }
+        }
+        
+        &-link {
+            color: $lightColor;
+            
+            &:hover {
+                color: $white;
+            }
+            
+            &_tel {
+                color: $white;
+                
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
     }
 }
 

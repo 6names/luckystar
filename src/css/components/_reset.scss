@@ -38,8 +38,8 @@ body {
     font-size: 16px;
     font-weight: 400;
     font-family: $mainFont;
-    color: $black;
-    background: $white;
+    color: $white;
+    background: $black;
 
     &.modal-open {
         overflow: hidden;

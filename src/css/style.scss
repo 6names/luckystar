@@ -6,8 +6,11 @@
 @import "components/typical-elements";
 @import "components/header";
 @import "components/header";
-@import "components/mobile-header";
 @import "components/footer";
-@import "components/breadcrumbs";
 @import "components/modal";
-@import "components/accordions";
+
+@media only screen and (max-width: 1659px) {
+    blockquote {
+        cursor: pointer;
+    }
+}

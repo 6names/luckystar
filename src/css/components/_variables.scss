@@ -1,17 +1,25 @@
 //noinspection ALL
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'),
+    url('../fonts/Helvetica.woff2') format('woff2'),
+    url('../fonts/Helvetica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 //variables
-$mainFont: Arial, Helvetica, sans-serif;
-
-$theme: #17fdff;
+$mainFont: 'Helvetica', Arial, Helvetica, sans-serif;
+$lightColor: #494949;
+$theme: #00fc43;
 
 $red: #ec0001;
 $black: #000000;
 $white: #ffffff;
-$placeholder: #919191;
+$placeholder: #494949;
 
 $inputBg: #e5e5e5;
-$border: #c1c1c1;
+$border: #292622;
 
 $facebook: #3a5997;
 $twitter: #30acee;

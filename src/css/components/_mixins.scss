@@ -22,7 +22,7 @@
     text-indent: -999em;
 }
 
-@mixin inner($width: 1208px) {
+@mixin inner($width: 1560px) {
     position: relative;
     max-width: $width;
     padding-left: 30px;
@@ -31,8 +31,8 @@
     margin-right: auto;
     
     @media only screen and (max-width: 1024px) {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
     
 }
