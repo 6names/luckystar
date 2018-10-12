@@ -2,7 +2,7 @@
   "name": "luckystar",
   "version": "1.0.0",
   "description": "luckystar",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,14 +17,9 @@
   "license": "ISC",
   "homepage": "",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "webpack-stream": "^4.0.3",
     "browser-sync": "^2.23.6",
     "css-mqpacker": "^6.0.2",
     "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.0.1",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",

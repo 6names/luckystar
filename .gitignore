@@ -3,16 +3,9 @@
 node_modules/
 .idea
 
-# JS #
-######################
-app.js
-app.js.map
-
 # Styles #
 ######################
 .sass-cache/
-style.css
-style.css.map
 
 # OS generated files #
 ######################

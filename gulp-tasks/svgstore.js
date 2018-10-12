@@ -1,4 +1,4 @@
-const gulp = require('gulp'),
+var gulp = require('gulp'),
     svgmin = require('gulp-svgmin'),
     svgstore = require('gulp-svgstore'),
     path = require('path'),
@@ -9,7 +9,7 @@ module.exports = function (gulp, callback) {
         .src('./src/images/svg/*.svg', {base: 'src/svg'})
         .pipe(rename({prefix: 'icon-'}))
         .pipe(svgmin(function (file) {
-            const prefix = path.basename(file.relative, path.extname(file.relative));
+            var prefix = path.basename(file.relative, path.extname(file.relative));
             return {
                 plugins: [{
                     cleanupIDs: {

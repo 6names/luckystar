@@ -1,9 +1,9 @@
-const fileinclude = require('gulp-file-include'),
+var fileinclude = require('gulp-file-include'),
     gulp = require('gulp'),
     plumber = require('gulp-plumber');
 
 
-const fileincludeTemplate = (name, file, destination) => {
+var fileincludeTemplate = function (name, file, destination) {
     gulp.task(name, function () {
         gulp.src([file])
             .pipe(plumber())
@@ -17,4 +17,4 @@ const fileincludeTemplate = (name, file, destination) => {
 };
 
 // Index
-fileincludeTemplate('fileIndex', './src/html/index.html', './src/');
+fileincludeTemplate('fileIndex', './src/html/*.html', './src/');
