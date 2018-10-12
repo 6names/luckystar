@@ -109,10 +109,10 @@
     }
 }
 
-@mixin pageTitle {
-    margin-bottom: 29px;
-    font-size: 44px;
-    line-height: 1.05em;
+@mixin pageTitle($margin: 45px) {
+    margin-bottom: $margin;
+    font-size: 30px;
+    line-height: 1.3em;
     
     @media only screen and (max-width: 1024px) {
     

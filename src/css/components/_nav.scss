@@ -1,0 +1,36 @@
+.nav {
+    padding-top: 42px;
+    padding-bottom: 48px;
+    font-size: 22px;
+    
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 6px;
+        @include accordion-content;
+    }
+    
+    &__item {
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+    
+    &__link {
+        color: $lightColor;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: all 0.2s;
+        
+        &.active,
+        &:hover {
+            text-decoration: none;
+            color: $theme;
+        }
+        
+        &.active {
+            pointer-events: none;
+        }
+    }
+}

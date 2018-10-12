@@ -1,5 +1,22 @@
 // Titles
-
+.page-title {
+    max-width: 625px;
+    color: $theme;
+    @include pageTitle();
+    
+    &__trigger {
+        display: inline-block;
+        color: $lightColor;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: all 0.2s;
+        
+        &:hover {
+            text-decoration: none;
+            color: $theme;
+        }
+    }
+}
 // Links
 a {
     color: $theme;
@@ -20,6 +37,13 @@ a {
         cursor: default;
         color: inherit;
         text-decoration: none;
+    }
+}
+
+// Main
+.main {
+    &__inner {
+        @include inner;
     }
 }
 

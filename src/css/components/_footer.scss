@@ -1,11 +1,14 @@
 .footer {
     position: relative;
     z-index: 50;
-    width: 100%;
-    min-height: 100px;
+    padding-top: 86px;
+    font-size: 22px;
     overflow: hidden;
+    @include inner();
     
     &__inner {
-        @include inner();
+        padding-top: 27px;
+        padding-bottom: 50px;
+        border-top: 1px solid $border;
     }
 }
