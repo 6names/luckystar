@@ -50,4 +50,22 @@
     &__name {
         color: $theme;
     }
+    
+    @media only screen and (max-width: 1024px) {
+        &__item {
+            min-height: 300px;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        &__list {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    @media only screen and (max-width: 480px) {
+        &__item {
+            min-height: 180px;
+        }
+    }
 }

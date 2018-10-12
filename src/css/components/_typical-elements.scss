@@ -45,6 +45,10 @@ a {
     &__inner {
         @include inner;
     }
+    
+    &__content {
+        @include accordion-content;
+    }
 }
 
 // Icons

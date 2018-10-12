@@ -30,15 +30,22 @@
     }
     
     &__contacts {
-        position: relative;
         
         &-trigger {
             display: none;
+            cursor: pointer;
+            
+            svg {
+                width: 15px;
+                height: 15px;
+                fill: $lightColor;
+            }
         }
         
         &-list {
             display: flex;
             align-items: center;
+            background-color: $black;
         }
         
         &-item {
@@ -62,6 +69,56 @@
                 
                 &:hover {
                     text-decoration: none;
+                }
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        &__contacts-item {
+            font-size: 20px;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        &__logo {
+            &-icon {
+                margin-right: 7px;
+            
+                svg {
+                    width: 19px;
+                    height: 14px;
+                }
+            }
+            
+            &-name {
+                width: 106px;
+                height: 17px;
+            }
+        }
+        
+        &__contacts {
+            
+            &-trigger {
+                display: block;
+            }
+            
+            &-list {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: block;
+                width: 100%;
+                padding-right: 25px;
+                padding-bottom: 25px;
+                padding-left: 25px;
+                @include accordion-content;
+            }
+            
+            &-item {
+                &:not(:first-child) {
+                    margin-top: 20px;
+                    margin-left: 0;
                 }
             }
         }

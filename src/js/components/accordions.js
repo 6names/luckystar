@@ -9,6 +9,7 @@ export const accordion = (triggers, contents, parent) => {
     const content = parent.querySelectorAll(contents);
     
     forLoop(trigger.length, (i) => {
+        const buttonText = trigger[i].querySelectorAll('.button-text');
         trigger[i].addEventListener('click', () => {
             if (trigger[i].classList.contains('active')) {
                 trigger[i].classList.remove('active');
@@ -16,6 +17,12 @@ export const accordion = (triggers, contents, parent) => {
             } else {
                 trigger[i].classList.add('active');
                 content[i].classList.add('active');
+            }
+    
+            if (buttonText.length > 0) {
+                forLoop(buttonText.length, (j) => {
+                    buttonText[j].classList.toggle('visually-hidden');
+                });
             }
         });
     });
