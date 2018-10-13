@@ -4,8 +4,14 @@
     color: $theme;
     @include pageTitle();
     
+    &__subtitle {
+        display: block;
+        color: $lightColor;
+    }
+    
     &__trigger {
-        display: inline-block;
+        display: block;
+        max-width: 400px;
         color: $lightColor;
         text-decoration: underline;
         cursor: pointer;
@@ -16,6 +22,10 @@
             color: $theme;
         }
     }
+}
+
+.section-title {
+    @include pageTitle(18px);
 }
 // Links
 a {
@@ -53,12 +63,6 @@ a {
     &__content {
         @include accordion-content;
     }
-}
-
-// Icons
-#ui-icons,
-.ui-icons {
-    display: none;
 }
 
 // Hidden elements

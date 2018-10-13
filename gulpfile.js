@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 
 // Serve
 gulp.task('serve', function (fn) {
-    run('fileIndex', 'sass', 'svgstore', fn);
+    run('fileIndex', 'sass', fn);
     browserSync.init({
         server: "./src/",
         notify: false
@@ -22,9 +22,6 @@ gulp.task('serve', function (fn) {
     // CSS
     gulp.watch('./src/css/**/*.scss', ['sass']);
     gulp.watch('./src/css/style.css').on('change', browserSync.reload);
-    
-    // SVG
-    gulp.watch('./src/images/svg/*.svg', ['svgstore']);
 });
 
 // Import of all tasks

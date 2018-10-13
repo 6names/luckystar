@@ -32,6 +32,8 @@
     &__contacts {
         
         &-trigger {
+            position: relative;
+            top: -2px;
             display: none;
             cursor: pointer;
             

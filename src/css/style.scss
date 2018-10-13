@@ -1,18 +1,11 @@
 @import "components/variables";
 @import "components/mixins";
 @import "components/reset";
-@import "components/buttons";
-@import "components/form-elements";
 @import "components/typical-elements";
 @import "components/header";
 @import "components/nav";
 @import "components/columns";
 @import "components/team";
+@import "components/case";
+@import "components/portfolio";
 @import "components/footer";
-@import "components/modal";
-
-@media only screen and (max-width: 1659px) {
-    blockquote {
-        cursor: pointer;
-    }
-}
