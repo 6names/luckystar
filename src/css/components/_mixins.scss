@@ -9,19 +9,6 @@
     overflow: hidden;
 }
 
-@mixin fullLink() {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    display: block;
-    width: 100%;
-    height: 100%;
-    outline: none;
-    overflow: hidden;
-    text-indent: -999em;
-}
-
 @mixin inner($width: 1560px) {
     position: relative;
     max-width: $width;
@@ -37,37 +24,15 @@
     
 }
 
-@mixin child($n, $t) {
-    &:nth-child(#{$n}) {
-        z-index: ($t - $n) + 1;
-    }
-}
-
-@mixin section-scroll() {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% + 1000px);
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-@mixin section-scroll-content() {
-    position: relative;
-    width: calc(100% - 1000px);
-}
-
 @mixin accordion-content() {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all 0.15s;
+    &:not(.active) {
+        opacity: 0;
+        @include visually-hidden;
+    }
     
     &.active {
-        max-height: 3000px;
         opacity: 1;
-        transition: max-height 0.8s, opacity 0.2s;
+        transition: opacity 0.35s;
     }
 }
 
@@ -95,20 +60,6 @@
     }
 }
 
-@mixin sectionTitle {
-    margin-bottom: 29px;
-    font-size: 44px;
-    line-height: 1.05em;
-    
-    @media only screen and (max-width: 1024px) {
-    
-    }
-    
-    @media only screen and (max-width: 680px) {
-    
-    }
-}
-
 @mixin pageTitle($margin: 45px) {
     margin-bottom: $margin;
     font-size: 30px;
@@ -121,26 +72,4 @@
     @media only screen and (max-width: 680px) {
     
     }
-}
-
-@mixin centeredButton() {
-    width: 100%;
-    margin-top: 25px;
-    text-align: center;
-    clear: both;
-    
-    [class*="butn"] {
-        display: inline-block;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    
-    @media only screen and (max-width: 680px) {
-    
-    }
-}
-
-@mixin buttonHeight($height) {
-    height: $height;
-    border-radius: ceil($height / 2);
 }
