@@ -4,6 +4,12 @@
   font-weight: normal;
   font-style: normal; }
 
+@keyframes claw {
+  0% {
+    transform: scaleY(1); }
+  100% {
+    transform: scaleY(0.6); } }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -181,6 +187,9 @@ a {
         width: 25px;
         height: 18px;
         fill: #ffffff; }
+      .header__logo-icon .claw {
+        animation: claw 0.6s linear alternate infinite;
+        transform-origin: bottom right; }
   .header__contacts-trigger {
     position: relative;
     top: -2px;
