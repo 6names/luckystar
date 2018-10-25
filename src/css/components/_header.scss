@@ -65,10 +65,29 @@
         }
         
         &-link {
+            position: relative;
             color: $lightColor;
+    
+            &:before {
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: -2px;
+                display: block;
+                width: 100%;
+                height: 2px;
+                transition: all 0.2s;
+                background-color: $white;
+                opacity: 0;
+            }
             
             &:hover {
                 color: $white;
+                text-decoration: none;
+    
+                &:before {
+                    opacity: 1;
+                }
             }
             
             &_tel {

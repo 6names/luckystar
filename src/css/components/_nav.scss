@@ -19,16 +19,33 @@
     }
     
     &__link {
+        position: relative;
         color: $lightColor;
-        text-decoration: underline;
+        text-decoration: none;
         cursor: pointer;
         transition: all 0.2s;
+        
+        &:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: -2px;
+            display: block;
+            width: 100%;
+            height: 2px;
+            transition: all 0.2s;
+            background-color: $lightColor;
+        }
         
         &.active,
         &.current,
         &:hover {
             text-decoration: none;
             color: $theme;
+    
+            &:before {
+                opacity: 0;
+            }
         }
         
         &.current {
